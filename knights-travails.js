@@ -23,7 +23,7 @@ export default function knightMoves(start, end) {
   const queue = [];
   visitSquare(queue, visited, parent, null, start); //set start parent to null
 
-  // Initialize total moves to zero
+  // Initialize moves to zero
   let moves = 0;
 
   // While queue is not empty
@@ -69,7 +69,7 @@ function isValid(square) {
   return true;
 }
 
-// Pushes a square to queue, marks it as visited and set its parent
+// Pushes a square to queue, marks it as visited and sets its parent
 function visitSquare(queue, visited, parent, from, to) {
   queue.push(to);
   visited[to[0]][to[1]] = true;
